@@ -1,0 +1,3 @@
+[submodule "juris"]
+	path = juris
+	url = ./ic_uber/interface/juris/

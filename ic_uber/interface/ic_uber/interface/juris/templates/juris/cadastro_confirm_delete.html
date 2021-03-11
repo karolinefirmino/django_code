@@ -1,0 +1,19 @@
+{% extends "base_bootstrap.html" %}
+{% load static %}
+
+<head>
+	 <link href="{% static 'juris/css/styles.css' %}" rel="stylesheet" />
+</head>
+{% block content %}
+
+<h1>Deletar Cadastros</h1>
+
+<p>Você tem certeza que quer excluir o cadastro: {{ cadastro }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Sim, deletar.">
+  <input type="submit" onclick="window.location='{% url 'juris:all' %}' ; return false;" value="Cancel">
+</form>
+
+{% endblock %}

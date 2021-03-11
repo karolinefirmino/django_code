@@ -1,0 +1,262 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Uberization in Brazil</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="{% static 'https://use.fontawesome.com/releases/v5.15.1/js/all.js'%}" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="{% static 'https://fonts.googleapis.com/css?family=Varela+Round' %}" rel="stylesheet" />
+        <link href="{% static 'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i' %}" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'juris/css/styles.css' %}" rel="stylesheet" />
+      <link rel="stylesheet" href="global-styles.css">
+  <style>
+    .fullclick {
+      margin: 1em 0;
+      padding: 0;
+      max-width: 30em;
+    }
+    .fullclick li {
+      list-style: none;
+      margin: 1em 0;
+      padding: 10px 5px;
+      background: #629c92;
+      position: relative;
+    }
+    .fullclick a.main {
+      color: white;
+      text-align: right;
+      display: block;
+      z-index: 1;
+    }
+    .fullclick li a.main::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: ' ';
+    }
+
+    .center {
+      margin: auto;
+      width: 60%;
+      height: 50%;
+      /*border: 3px solid #73AD21;*/
+      /*background: #629c92;*/
+      color: gray;
+      padding: 0px;
+    }
+
+  </style>
+    </head>
+{% block content %}
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Top page</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Options
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Analysis</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'juris:login' %}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'juris:cadastro_create' %}">Database Manipulation</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Uberisation in Brazil</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Mapping the legal understanding and response to the emerging morphologies and organization of labor</h2>
+                    <a class="btn btn-primary js-scroll-trigger" href="{% url 'juris:cadastro_create' %}">Get Started</a>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-white mb-4">Research</h2>
+                        <p class="text-white-50">
+                            Uberization, Gig Economy, Gig Work, Precarization, Informal Labor. All these terms, and a lot more, are used to describe in order to trying to grasp the complexity and heterogeneous phenomena in the currently organization of work in the global/digital market of today.
+                            How we can approach that?
+                            Legal frame of this question is enough? We believe not, but still, legal understand of these contemporary issues is essencial to think how to regulate these kind of works around the globe.
+                        </p>
+                    </div>
+                     <!-- <h1> Explore </h1>  -->
+                      <div class="center" >
+                        <p>
+                          <h4>Archives of the Research Project</h4>
+                         
+                            Here you will encounter our research project and other archives that are our reading to conduct the project itself.  
+                          
+                          <a href="{% url 'juris:cadastro_create' %}" class="main">More info.</a>
+                        </p>
+                        <p>
+                          <h4>Brazilian Jurisprudence Database</h4>
+                          
+                            Here you will find the judicial cases against companies like Uber, iFood, Loggi, Natura, 99 Tecnologia and others that is part of our sample to analyse the understandin f the phenomena called "uberisation of work".
+                        
+                          <a href="{% url 'juris:index' %}" class="main">More info.</a>
+                        </p>
+                            <p>
+                          <h4>Our current thoughts </h4>
+                         
+                          In this space you can read our thoughts and the status of the current research. 
+                          Here we put also our favorite podcasts, readings, documents, news, etc.
+                         
+                          <a href="{% url 'juris:arquivo_list' %}" class="main">Explore more here</a>
+                        </p>
+                      </div>
+
+
+
+                </div>
+                <!--<img class="img-fluid" src="{% static 'juris/giphy.gif'%}" alt="" /> --> 
+            </div>
+        </section>
+
+
+        <section class="projects-section bg-light" id="projects">
+            <div class="container">
+                <!-- Featured Project Row-->
+                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'assets/img/bg-masthead.jpg' %}" alt="" /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Levels of </h4>
+                            <p class="text-black-50 mb-0">Due to the multidimensional characteristics of the contemporary labor organization that we generally refer as 'uberization', it's very important to divide the levels of analysis to demonstrate our research and understading of these questions.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/demo-image-01.jpg' %}" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Digital Law</h4>
+                                    <p class="mb-0 text-white-50">One level of analysis </p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row justify-content-center no-gutters">
+                    <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/demo-image-02.jpg' %}" alt="" /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Intersections with the Theory of Law</h4>
+                                    <p class="mb-0 text-white-50">Digital law and Computational Law</p>
+                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+                        <form class="form-inline d-flex">
+                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter email address..." />
+                            <button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Location</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50">Limeira, São Paulo - Brasil</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50"><a href="#!">krodrigues.firmino2@gmail.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Other Informations</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50">Pesquisa desenvolvida por: Helora Maria Machado da Cunha e  
+                                Karoline Rodrigues Firmino;
+            
+                                Orientador: Ricardo Antonio Bittar Hajel Filho
+
+                                <p>Instituição: Universidade Paulista (UNIP) - Campus Limeira /
+
+                               Apoio: Santander Universidades </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="{% static '#!'%}"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="{% static '#!'%}"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="{% static '#!'%}"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+{% endblock %}
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Proudly produced by Karoline Rodrigues Firmino, 2021</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' %}"></script>
+        <script src="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js'%}"></script>
+        <!-- Third party plugin JS-->
+        <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js' %}"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+          <script src="donav.js"></script>
+
+    </body>
+</html>

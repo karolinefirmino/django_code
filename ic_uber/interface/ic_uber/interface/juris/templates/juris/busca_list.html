@@ -1,0 +1,22 @@
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+  <h1>Termo de Busca - Lista</h1>
+  {% if busca_list %}
+  <ul>
+    {% for busca in busca_list %}
+      <li>
+          {{ busca.name }}
+         (<a href="{% url 'juris:termobusca_update' termobusca.id %}">Atualizar</a> |
+          <a href="{% url 'juris:termobusca_delete' termobusca.id %}">Deletar</a>)
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p> Não há termos de busca nessa biblioteca.</p>
+  {% endif %}
+  <p><a href="{% url 'juris:termobusca_create' %}">Adicione um termo de busca/pesquisa</a></p>
+  <p>
+    <a href="{% url 'juris:all' %}">Voltar para Home</a>
+  </p>
+{% endblock %}

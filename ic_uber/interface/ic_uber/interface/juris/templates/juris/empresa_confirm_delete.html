@@ -1,0 +1,15 @@
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+
+<h1>Deletar Empresa</h1>
+
+<p>Você tem certeza que quer excluir a empresa: {{ empresa }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Sim, delete.">
+  <input type="submit" onclick="window.location='{% url 'juris:all' %}' ; return false;" value="Cancel">
+</form>
+
+{% endblock %}

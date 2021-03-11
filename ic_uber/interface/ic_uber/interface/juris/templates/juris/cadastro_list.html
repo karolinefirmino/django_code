@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.myself .property{
+  width:30%;
+  display:inline-block;
+  box-sizing:border-box;
+  text-align:right;
+  }
+
+.myself .value{
+  text-align:left;
+  padding-left:10px;
+  width:70%;
+  display:inline-block;
+  box-sizing:border-box;
+  }
+
+</style>
+</head>
+
+{% block content %}
+  <h1>Cadastro - Lista</h1>
+  {% if cadastro_list %}
+  <ul>
+    {% for cadastro in cadastro_list %}
+      <li>
+        <table id="mytable">
+  <colgroup>
+    <col span="5" >
+
+            <tr>
+              <div class= property> <th>id </th> </div>
+              <div class= property> <th>Número do processo </th></div>
+              <div class= property> <th> Empresa </th></div>
+              <div class= property> <th> Vínculo Empregatício </th></div>
+              <div class= property> <th> Estado </th></div>
+            </tr>
+                <tr>
+                <div class= value><td> {{ cadastro.id }} </td></div>
+                <div class= value> <td>{{ cadastro.numero }} </td></div>
+                <div class= value> <td> {{ cadastro.poloPassivo }}  </td></div>
+                <div class= value> <td> {{ cadastro.vinculoEmpregaticio}} </td></div>
+                <div class= value> <td> {{ cadastro.estado }} </td></div>
+              </tr>
+ 
+         (<a href="{% url 'juris:cadastro_update' cadastro.id %}">Atualizar</a> |
+          <a href="{% url 'juris:cadastro_delete' cadastro.id %}">Deletar</a>)
+  </colgroup>
+        </table>
+      </li>
+
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p> Não há cadastros nesta biblioteca.</p>
+  {% endif %}
+  <p><a href="{% url 'juris:cadastro_create' %}">Realize um Cadastro</a></p>
+  <!-- <p>
+    <a href="{% url 'juris:empresa_list' %}">Voltar para Home</a>
+  </p> -->
+{% endblock %}
+
+
+
+</body>
+</html>

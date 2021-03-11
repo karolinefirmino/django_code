@@ -1,0 +1,22 @@
+
+
+{% load static %}
+<head>
+	 <link href="{% static 'juris/css/styles.css' %}" rel="stylesheet" />
+</head>
+
+
+{% block content %}
+	<h2> Upload </h2>
+
+	<form method ="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<input type="file" name="docfile">
+		<button type="submit"> Upload file </button>
+	</form>
+	{% if url %}
+	<p> Upload file: <a href = "{{url}}">{{url}}</a></p>
+	{% endif %}
+
+
+{% endblock %} 

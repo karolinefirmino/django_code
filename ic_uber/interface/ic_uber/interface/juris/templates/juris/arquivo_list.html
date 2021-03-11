@@ -1,0 +1,25 @@
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+  <h1>Arquivo - Lista</h1>
+  {% if busca_list %}
+  <ul>
+    {% for arquivo in arquivos %}
+      <li>
+          {{ arquivo.id }}
+          {{ arquivo.numero }}
+          {{ arquivo.tribunal}}
+          {{ arquivo.arquivo }}
+         (<a href="{% url 'juris:arquivo_update' arquivo.id %}">Atualizar</a> |
+          <a href="{% url 'juris:arquivo_delete' arquivo.id %}">Deletar</a>)
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p> Não há arquivos nesta biblioteca.</p>
+  {% endif %}
+  <p><a href="{% url 'juris:arquivo_create' %}">Adicione um arquivo</a></p>
+  <p>
+    <a href="{% url 'juris:all' %}">Voltar para Home</a>
+  </p>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+  <h1>Empresa - Lista</h1>
+  {% if empresa_list %}
+  <ul>
+    {% for empresa in empresa_list %}
+      <li>
+          {{ empresa.name }}
+         (<a href="{% url 'juris:empresa_update' empresa.id %}">Atualizar</a> |
+          <a href="{% url 'juris:empresa_delete' empresa.id %}">Deletar</a>)
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p> Não há empresas nessa biblioteca.</p>
+  {% endif %}
+  <p><a href="{% url 'juris:empresa_create' %}">Adicione uma empresa</a></p>
+  <p>
+    <a href="{% url 'juris:all' %}">Voltar para Home</a>
+  </p>
+{% endblock %}

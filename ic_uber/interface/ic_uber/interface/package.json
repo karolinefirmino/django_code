@@ -1,0 +1,26 @@
+{
+  "name": "juris",
+  "version": "1.0.0",
+  "description": "jason file to the project juris",
+  "main": "index.js",
+  "scripts": {
+    "test": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firmfrol19/django_projects.git"
+  },
+  "keywords": [
+    "juris-json"
+  ],
+  "author": "karoline rodrigues firmino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/firmfrol19/django_projects/issues"
+  },
+  "homepage": "https://github.com/firmfrol19/django_projects#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1"
+  }
+}

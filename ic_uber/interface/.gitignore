@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+*.sqlite3
+.env
+
+ *.pub
+*karol
+*.doc
+*doc
+*.ini
+=======
+__pycache__
+*.swp
+*.sqlite3
+>>>>>>> b35fbef7d487847b958c69b0bf1510a9f23b97b0
